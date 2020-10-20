@@ -1,0 +1,9 @@
+ps2-project                #Project's root folder.
+|____CMakeLists.txt        #Used to tell CMake what to do.
+|____build                 #Created by CMake.
+|____src		   #Has our code and the libraries.
+| |____tests               #Algebra code.
+| | |____eigen3            #Contains the algebra code that uses the Eigen3 library.
+| | |____ublas             #Contains the algebra code that uses the Ublas library.
+| |____3.2.10 (EIGEN3)     #Eigen3 library.
+
