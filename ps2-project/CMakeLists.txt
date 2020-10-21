@@ -9,6 +9,7 @@ set(CMAKE_CXX_STANDARD 11)
 #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS_DEBUG} -O0")
 
 
+
 #3. Which is the project's root folder?
 project(ps2-project)
 
@@ -46,19 +47,21 @@ add_executable(matrix-product-equal-test-2-exe src/tests/eigen3/matrix-product-e
 add_executable(matrix-product-exe src/tests/eigen3/matrix-product.cpp)
 
 #5.1.2 Ublas files.
-add_executable(array-addition-3x1-ublas-exe src/tests/ublas/array-addition-3x1.cpp)  
+add_executable(array-addition-3x1-ublas-exe src/tests/ublas/array-addition-3x1.cpp)
+add_executable(matrix-product-ublas-exe src/tests/ublas/matrix-product-ublas.cpp)  
 
 #5.2 Link the executables and the libraries.
 #5.2.1 Eigen3 files.
 target_link_libraries(array-addition-3x1-eigen3-exe ${Boost_LIBRARIES})
 target_link_libraries(array-addition-equal-test-1-eigen3-exe ${Boost_LIBRARIES})
 target_link_libraries(array-addition-equal-test-2-eigen3-exe ${Boost_LIBRARIES})
-target_link_libraries(random-matrix-product-equal-test-exe ${Boost_LIBRARIES})
-target_link_libraries(random-matrix-product-equal-test-2-exe ${Boost_LIBRARIES})
-target_link_libraries(random-matrix-product-exe ${Boost_LIBRARIES})
+target_link_libraries(matrix-product-equal-test-exe ${Boost_LIBRARIES})
+target_link_libraries(matrix-product-equal-test-2-exe ${Boost_LIBRARIES})
+target_link_libraries(matrix-product-exe ${Boost_LIBRARIES})
 
 #5.2.2 Ublas files.
 target_link_libraries(array-addition-3x1-ublas-exe ${Boost_LIBRARIES})
+target_link_libraries(matrix-product-ublas-exe ${Boost_LIBRARIES})
 
 
 
